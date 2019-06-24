@@ -1,0 +1,11 @@
+D:\work\solution\TEMP.HCM\Library\TEMP.HCM.Library\bin\Debug\TEMP.HCM.Library.dll
+D:\work\solution\TEMP.HCM\Library\TEMP.HCM.Library\bin\Debug\TEMP.HCM.Library.pdb
+D:\work\solution\TEMP.HCM\Library\TEMP.HCM.Library\bin\Debug\AjaxMin.dll
+D:\work\solution\TEMP.HCM\Library\TEMP.HCM.Library\bin\Debug\AjaxPro.2.dll
+D:\work\solution\TEMP.HCM\Library\TEMP.HCM.Library\bin\Debug\MongoDB.Bson.dll
+D:\work\solution\TEMP.HCM\Library\TEMP.HCM.Library\bin\Debug\MongoDB.Driver.dll
+D:\work\solution\TEMP.HCM\Library\TEMP.HCM.Library\bin\Debug\MongoDB.Driver.Legacy.dll
+D:\work\solution\TEMP.HCM\Library\TEMP.HCM.Library\obj\Debug\TEMP.HCM.Library.csproj.CoreCompileInputs.cache
+D:\work\solution\TEMP.HCM\Library\TEMP.HCM.Library\obj\Debug\TEMP.HCM.Library.csproj.CopyComplete
+D:\work\solution\TEMP.HCM\Library\TEMP.HCM.Library\obj\Debug\TEMP.HCM.Library.dll
+D:\work\solution\TEMP.HCM\Library\TEMP.HCM.Library\obj\Debug\TEMP.HCM.Library.pdb
