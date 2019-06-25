@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28922.388
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TEMP.HCM", "TEMP.HCM\TEMP.HCM.csproj", "{BE8CF6FB-DBA8-4238-A4A5-058DEA2E87BE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TEMP.HCM", "Website\TEMP.HCM.csproj", "{BE8CF6FB-DBA8-4238-A4A5-058DEA2E87BE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TEMP.HCM.Library", "Library\TEMP.HCM.Library\TEMP.HCM.Library.csproj", "{F84815E0-45EB-4318-8487-330ECC6279DA}"
 EndProject

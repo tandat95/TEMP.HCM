@@ -9,3 +9,15 @@ D:\work\solution\TEMP.HCM\Library\TEMP.HCM.Library\obj\Debug\TEMP.HCM.Library.cs
 D:\work\solution\TEMP.HCM\Library\TEMP.HCM.Library\obj\Debug\TEMP.HCM.Library.csproj.CopyComplete
 D:\work\solution\TEMP.HCM\Library\TEMP.HCM.Library\obj\Debug\TEMP.HCM.Library.dll
 D:\work\solution\TEMP.HCM\Library\TEMP.HCM.Library\obj\Debug\TEMP.HCM.Library.pdb
+D:\tandat\TEMP.HCM\Library\TEMP.HCM.Library\bin\Debug\TEMP.HCM.Library.dll
+D:\tandat\TEMP.HCM\Library\TEMP.HCM.Library\bin\Debug\TEMP.HCM.Library.pdb
+D:\tandat\TEMP.HCM\Library\TEMP.HCM.Library\bin\Debug\AjaxMin.dll
+D:\tandat\TEMP.HCM\Library\TEMP.HCM.Library\bin\Debug\AjaxPro.2.dll
+D:\tandat\TEMP.HCM\Library\TEMP.HCM.Library\bin\Debug\MongoDB.Bson.dll
+D:\tandat\TEMP.HCM\Library\TEMP.HCM.Library\bin\Debug\MongoDB.Driver.dll
+D:\tandat\TEMP.HCM\Library\TEMP.HCM.Library\bin\Debug\MongoDB.Driver.Legacy.dll
+D:\tandat\TEMP.HCM\Library\TEMP.HCM.Library\obj\Debug\TEMP.HCM.Library.csprojAssemblyReference.cache
+D:\tandat\TEMP.HCM\Library\TEMP.HCM.Library\obj\Debug\TEMP.HCM.Library.csproj.CoreCompileInputs.cache
+D:\tandat\TEMP.HCM\Library\TEMP.HCM.Library\obj\Debug\TEMP.HCM.Library.csproj.CopyComplete
+D:\tandat\TEMP.HCM\Library\TEMP.HCM.Library\obj\Debug\TEMP.HCM.Library.dll
+D:\tandat\TEMP.HCM\Library\TEMP.HCM.Library\obj\Debug\TEMP.HCM.Library.pdb
