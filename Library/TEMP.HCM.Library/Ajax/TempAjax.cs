@@ -21,5 +21,11 @@ namespace TEMP.HCM.Library.Ajax
         {
             return MongoProvider.ImportData();
         }
+
+        [AjaxMethod]
+        public List<HcmTemp> GetTempData(DateTime startTime, DateTime endTime)
+        {
+            return MongoProvider.GetTempData(startTime, endTime);
+        }
     }
 }

@@ -49,11 +49,15 @@
                         items: [
                             {
                                 region: 'west',
+                                layout:'fit',
                                 width: 400,
                                 split: true,
                                 collapsible: true,
                                 hideCollapseTool: true,
-                                collapseMode: 'mini'
+                                collapseMode: 'mini',
+                                items: {
+                                    xtype: 'tempgrid'
+                                }
                             },
                             {
 

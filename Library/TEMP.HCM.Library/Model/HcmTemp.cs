@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace TEMP.HCM.Library.Model
 {
-    public class HcmTemp
-    {
-        public string Name { get; set; }
-        public string Time { get; set; }
-        public string Value { get; set; }
+    public class HcmTemp { 
+        public List<string> DistrictNames { get; set; }
+        public DateTime Time { get; set; }
+        public string[] Value { get; set; }
         //public string District { get; set; }
     }
 }

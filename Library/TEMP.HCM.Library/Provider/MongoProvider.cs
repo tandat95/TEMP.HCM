@@ -8,6 +8,8 @@ using System.Xml.Linq;
 using Microsoft.VisualBasic.FileIO;
 using MongoDB;
 using MongoDB.Driver;
+using MongoDB.Bson;
+using MongoDB.Driver.Builders;
 using MongoDB.Driver.Linq;
 using TEMP.HCM.Library.Model;
 
@@ -15,12 +17,12 @@ namespace TEMP.HCM.Library.Provider
 {
     public static class MongoProvider
     {
-        public static MongoClient client = new MongoClient("mongodb://localhost");
-        public static IMongoDatabase db = client.GetDatabase("admin");
+        //public static MongoClient client = new MongoClient("mongodb://localhost");
+        public static MongoDatabase db = new MongoClient("mongodb://localhost").GetServer().GetDatabase("admin");
         public static void InsertData()
         {
             var temp = db.GetCollection<HcmShape>("hcm_shape");
-            temp.InsertOne(new HcmShape
+            temp.Insert(new HcmShape
             {
                 Type = "polygon",
                 Level = "province",
@@ -3688,30 +3690,65 @@ namespace TEMP.HCM.Library.Provider
         {
             using (TextFieldParser parser = new TextFieldParser(@"D:\work\2019.csv"))
             {
-                parser.TextFieldType = FieldType.Delimited;
-                parser.SetDelimiters(",");
-                var a = new List<string[]>();
-                while (!parser.EndOfData)
-                { 
-                    string[] fields = parser.ReadFields();
-                    a.Add(fields);
-                }
-                var b = new List<HcmTemp>();
-                var bb = a[0];
-                for(var i=1; i< bb.Length; i++)
+                try
                 {
-                    for(var j = 1; j<a.Count; j++)
+                    parser.TextFieldType = FieldType.Delimited;
+                    parser.SetDelimiters(",");
+                    var listTemp = new List<HcmTemp>();
+                    var districtNames = new List<string>();
+                    while (!parser.EndOfData)
                     {
-                        b.Add(new HcmTemp
+                        
+                        if (parser.LineNumber == 1)
                         {
-                            Name = bb[i],
-                            Value = a[j][i],
-                            Time = a[j][0]
+                            districtNames = parser.ReadFields().ToList();
+                            districtNames.RemoveAt(0);
+                            continue;
+                        }
+                        string[] fields = parser.ReadFields();
+                        listTemp.Add(new HcmTemp
+                        {
+                            DistrictNames = districtNames,
+                            Time = DateTime.Parse(fields[0]),
+                            Value = fields.Skip(1).ToArray()
                         });
+                        var dateTime = DateTime.Parse(fields[0]);
                     }
+                    var temp = db.GetCollection<HcmTemp>("hcm_temp");
+                    temp.InsertBatch<HcmTemp>(listTemp);
+                    return listTemp;
                 }
-                return b;
+                catch (Exception ex)
+                {
+                    return null;
+                }
+               
+                //var b = new List<HcmTemp>();
+                //var bb = a[0];
+                //for(var i=1; i< bb.Length; i++)
+                //{
+                //    for(var j = 1; j<a.Count; j++)
+                //    {
+                //        b.Add(new HcmTemp
+                //        {
+                //            Name = bb[i],
+                //            Value = double.Parse(a[j][i]),
+                //            Time = DateTime.Parse(a[j][0])
+                //        });
+                //    }
+                //}
+                ////var temp = db.GetCollection<HcmTemp>("hcmtemp_2019");
+                ////temp.InsertMany(b);
+                //return a;
             }
+        }
+
+        public static List<HcmTemp> GetTempData (DateTime start, DateTime end)
+        {
+            return db.GetCollection<HcmTemp>("hcm_temp")
+                .Find(Query.And(Query.GTE("Time", start), Query.LTE("Time", end)))
+                .SetFields(Fields.Exclude("_id").Include("DistrictNames", "Time","Value"))
+                .ToList();
         }
     }
 }

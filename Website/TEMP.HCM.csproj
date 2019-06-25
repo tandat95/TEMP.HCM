@@ -203,6 +203,7 @@
     <None Include="Scripts\Common\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\global.js" />
     <Content Include="Scripts\Home\home.js" />
+    <Content Include="Scripts\Home\view\TempList.js" />
     <Content Include="Scripts\Manager\manager.js" />
     <Content Include="Scripts\Manager\view\Viewport.js" />
     <Content Include="Scripts\Map\controller\MapPanel.js" />
